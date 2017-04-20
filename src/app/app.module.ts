@@ -31,7 +31,6 @@ import { PropertyPickerComponent } from './property-picker/property-picker.compo
 import { PropertyPickerNodeComponent } from './property-picker/property-picker-node.component';
 import { PropertyPickerNavComponent } from './property-picker/property-picker-nav.component';
 import { LoginComponent } from './login/login.component';
-import { SessionService } from "./session.service";
 
 const appRoutes: Routes = [
   { path: '', component: InformationBrowserComponent},
