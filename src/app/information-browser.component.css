@@ -1,0 +1,34 @@
+.card {
+    height: 100vh;
+    padding:0px;
+    margin: 0px;
+}
+
+.card-header {
+    min-height: 40px;
+    padding: 10px;
+    background-color:#e7e9e9;
+}
+
+.card-header #title {
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.card-header #logo {
+    height: 15px;
+}
+
+.card-block {
+    height:90vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+.card-footer {
+    min-height: 50px;
+    margin: 0px;
+    padding: 10px;
+    background-color:#e7e9e9;
+}

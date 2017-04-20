@@ -1,0 +1,21 @@
+<div class="modal fade search-criteria-modal" data-backdrop='static' tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Search Criteria</h5>
+        <button type="button" class="close" data-dismiss="modal" (click)="onClose()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <u4-ib-criteria-modal-item  *ngFor="let criterion of criteria" [criterion]="criterion" (criterionRemoved)="onCriteriaRemoved($event)"></u4-ib-criteria-modal-item>
+        <button type="button" class="btn btn-secondary btn-sm add-criteria-button" [disabled]="criteria.length == criteriaProvider.properties.length"
+                data-toggle="tooltip" data-placement="bottom" title="Add criterion" (click)="onAddCriterion($event)"><img src="assets/add_icon.svg"></button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" [disabled]="!isValid" (click)="onApplyCriteria()" data-dismiss="modal">Apply</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="onClose()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

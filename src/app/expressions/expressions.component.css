@@ -1,0 +1,28 @@
+.expression-list-item {
+  display: block;
+}
+
+.expressions-container {
+  width: 900px;
+  height: 701px;
+  child-align: top;
+}
+
+.expressions-setup-header {
+  height: 700px;
+  max-width: 682px;
+}
+
+.expressions-setup-header-card-block {
+  padding: 0;
+}
+
+.expressions-list-header {
+  height: 700px;
+  max-width: 210px;
+}
+
+.expressions-setup-block {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

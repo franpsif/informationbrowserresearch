@@ -1,0 +1,18 @@
+<div class="card">
+    <u4-ib-login></u4-ib-login>
+
+    <div class="card-header">
+        <h1 id="title"><img id="logo" src="assets/unit4-information-browser.svg" alt="Information Browser"></h1>
+    </div>
+    <div class="card-block">
+        <u4-ib-gridtabs #gridTabs (showExpressions)="showExpressions()"></u4-ib-gridtabs>
+    </div>
+    <div class="card-footer">
+        <u4-ib-action-bar (saveContent)="gridTabs.save()"></u4-ib-action-bar>
+    </div>
+</div>
+<u4-ib-expressions></u4-ib-expressions>
+
+
+<router-outlet></router-outlet>
+

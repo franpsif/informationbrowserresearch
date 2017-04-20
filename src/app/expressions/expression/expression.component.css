@@ -1,0 +1,75 @@
+.description-form-field {
+  margin-left: 4%;
+}
+
+.explanation-field {
+  margin-left: 4%;
+  padding-right: 2px;
+}
+
+.column-title {
+  padding-left: 2px;
+  font-weight: bold;
+}
+
+.column-list-title {
+  width: 40%;
+}
+
+.operators-list-title {
+  width: 11%;
+}
+
+.functions-list-title {
+  width: 14%;
+}
+
+.macros-list-title {
+  width: 25%;
+}
+
+.column-list {
+  width: 40%;
+  display: inline-block;
+}
+
+.operators-list {
+  width: 11%;
+}
+
+.functions-list {
+  width: 14%;
+}
+
+.macros-list {
+  width: 25%;
+}
+
+.list-bordered {
+  border: solid 1px darkgray;
+  height: 350px;
+}
+
+.list-tiny-margin {
+  margin-left: 1%;
+}
+
+.list-margin {
+  margin-left: 3%;
+}
+
+.column-list-item {
+  color: grey;
+  padding-left: 4px;
+  padding-top: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.aling-right {
+  alignment: left;
+}
+
+.bottom-form {
+  margin-top: 5px;
+}

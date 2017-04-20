@@ -1,0 +1,27 @@
+<p-overlayPanel #propertyPickerPanel [dismissable]="true" [showCloseIcon]="false">
+    <br>
+    <u4-ib-property-picker #propertyPicker [rootObject]="'Project'" [data]="data" [maxItemsPerGroup]= "5" [width]="400" [height]="300"></u4-ib-property-picker>
+    <br>
+    <button type="button" pButton icon="fa-check" (click)="propertyPickerPanel.hide($event)" label="Apply"></button>
+    <button type="button" pButton icon="fa-close" (click)="propertyPickerPanel.hide($event)" label="Cancel"></button>
+</p-overlayPanel>
+
+<div #sortingBarDropElement class="container-fluid div-sortbar-main clearfix">
+  <div class="btn-toolbar float-left" role="toolbar">
+    <button type="button" class="btn btn-info btn-sm sort-by-button" data-toggle="modal" data-target=".sort-by-modal">Sort by</button>
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-secondary btn-sm" *ngFor="let sortButton of sortingColumnsProvider.sorters" (click)="onClick(sortButton)">{{getSortButtonName(sortButton.dataIndex)}} <b>{{sortButton.sortSymbol}}</b></button>
+    </div>
+  </div>
+  <button type="button" class="btn btn-secondary btn-sm float-right" data-toggle="tooltip" data-placement="bottom"
+          title="Reload" (click)="reload()"><img src="assets/refresh.svg" height="20" width="20"></button>
+  <button type="button" class="btn btn-secondary btn-sm float-right" data-toggle="tooltip" data-placement="bottom"
+          title="Expressions" (click)="showExpressions()"><img src="assets/expressions_icon.svg" height="20" width="20"></button>
+  <button type="button" class="btn btn-secondary btn-sm float-right" data-placement="bottom" title="Criteria"
+          [ngClass]="{'btn-secondary': criteriaProvider.criteria.length == 0, 'btn-success': criteriaProvider.criteria.length != 0 }"
+          data-toggle="modal"  data-target=".search-criteria-modal"><img src="assets/filter_icon.svg" height="20" width="20"></button>
+  <button type="button" class="btn btn-secondary btn-sm float-right"  data-toggle="tooltip"
+          data-placement="bottom" title="Properties" (click)="propertyPickerPanel.show($event)"><img src="assets/propertypickericon.svg" height="20" width="20"></button>
+</div>
+<u4-ib-sort-by-modal [sorters]="sorters" (applySortings)="onApplySortings()"></u4-ib-sort-by-modal>
+<u4-ib-criteria-modal (applyCriteria)="onApplyCriteria()"></u4-ib-criteria-modal>

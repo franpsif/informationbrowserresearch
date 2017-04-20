@@ -1,0 +1,10 @@
+<h1 md-dialog-title>Renaming</h1>
+<div md-dialog-content>Please enter the new name for the column:<br>
+  <md-input-container>
+      <input mdInput placeholder="New name" #newNameInput>
+  </md-input-container>
+</div>
+<div md-dialog-actions>
+  <button md-button (click)="dialogRef.close(newNameInput.value)">Rename</button>
+  <button md-button (click)="dialogRef.close()">Cancel</button>
+</div>

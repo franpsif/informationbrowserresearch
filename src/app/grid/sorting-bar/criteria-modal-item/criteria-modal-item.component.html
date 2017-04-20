@@ -1,0 +1,32 @@
+<div class="form-inline">
+  <div class="form-group" [ngClass]="{'has-danger': !isPropertyNameValid}">
+    <label class="mr-sm-2" for="propertyNameField">Property</label>
+    <select #propertyNameField class="form-control form-control-sm custom-select" id="propertyNameField" [(ngModel)]="criterion.propertyName" required>
+      <option *ngFor="let column of criteriaProvider.properties" [value]="column.name">{{column.name}}</option>
+    </select>
+  </div>
+
+  <div class="form-group criteria-item" [ngClass]="{'has-danger': !isOperatorValid}">
+    <label class="mr-sm-2" for="operatorField">Operator</label>
+    <select #operatorField class="form-control form-control-sm custom-select" id="operatorField" [(ngModel)]="criterion.operator" required>
+      <option [value]="'Like'">Like</option>
+      <option [value]="'Greater Than'">Greater Than</option>
+      <option [value]="'Less Than'">Less Than</option>
+      <option [value]="'Between'">Between</option>
+    </select>
+  </div>
+
+  <div class="form-group criteria-item" [ngClass]="{'has-danger': !isValueFromValid}">
+    <label for="valueFromField">Value From</label>
+    <input #valueFromField type="text" class="form-control form-control-sm criteria-value-tofrom" id="valueFromField" placeholder="Value From" [ngModel]="criterion.valueFrom" required>
+  </div>
+
+  <div class="form-group criteria-item" [ngClass]="{'has-danger': !isValueToValid}">
+    <label for="valueToField">Value To</label>
+    <input #valueToField type="text" class="form-control form-control-sm criteria-value-tofrom" id="valueToField" placeholder="Value To" [ngModel]="criterion.valueTo">
+  </div>
+
+  <button type="button" class="btn btn-secondary btn-sm delete-item-button" data-toggle="tooltip" data-placement="bottom" title="Delete" (click)="onCriterionRemoveClicked(criterion)">
+    <img src="assets/delete_icon.svg" height="20" width="20">
+  </button>
+</div>

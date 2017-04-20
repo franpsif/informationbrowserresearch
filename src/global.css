@@ -1,0 +1,27 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+/* You can add global styles to this file, and also import other style files */
+html {
+  height: 100vh;
+}
+
+body {
+  overflow-y: auto;
+  height: 100vh;
+}
+
+/* Theme BREADCRUMS Component */
+.breadcrumb {
+  border: 0px;
+  border-radius: 0px;
+  width:100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.ui-widget-header {
+  border: 0px;
+  background: #9dd8f5;
+  color: #333333;
+}
+/* Theme BREADCRUMS Component */

@@ -1,0 +1,37 @@
+{
+    "root":true,
+    "expanded": true,
+    "children":[
+      {"text": "Associated objects", "expanded": true, "isNavigable": false,
+      "children": [
+        { "text": "Workflow process", "showCode": true, "showDescription": false, "isPropertyCodeChecked": false, "isPropertyTextChecked": false, "isNavigable": true}
+        ]},
+        { 
+        "text": "Project information", "expanded": true, "isNavigable": false,
+        "children": [
+            { "text": "Cost centre",   "showCode": true,"showDescription": true,"isPropertyCodeChecked": true,"isPropertyTextChecked": false, "isNavigable": true },
+            { "text": "Main project",  "showCode": true,"showDescription": true,"isPropertyCodeChecked": true,"isPropertyTextChecked": false, "isNavigable": true },
+            { "text": "Project ID",    "showCode": true,"showDescription": true,"isPropertyCodeChecked": true,"isPropertyTextChecked": false, "isNavigable": false },
+            { "text": "Project manager", "showCode": true,"showDescription": true,"isPropertyCodeChecked": false, "isPropertyTextChecked": true , "isNavigable": true },
+            { "text": "Project name",  "showCode": true,"showDescription": false, "isPropertyCodeChecked": true,"isPropertyTextChecked": false, "isNavigable": false  },
+            { "text": "Project type",  "showCode": true,"showDescription": true,"isPropertyCodeChecked": false, "isPropertyTextChecked": true, "isNavigable": true },
+            { "text": "Status",        "showCode": true,"showDescription": true,"isPropertyCodeChecked": false, "isPropertyTextChecked": true, "isNavigable": false  },
+            { "text": "Authorisation", "showCode": true,"showDescription": true,"isPropertyCodeChecked": false, "isPropertyTextChecked": false, "isNavigable": false  }
+          ]
+        }, {
+        "text": "Project duration", "expanded": true, "isNavigable": false,
+        "children": [
+            { "text": "Address", "expanded": true, "isNavigable": false,
+            "children": [
+                { "text": "Country code", "showCode": true,"showDescription": false,"isPropertyCodeChecked": false, "isPropertyTextChecked": false, "isNavigable": false  },
+                { "text": "Place",      "showCode": true,"showDescription": false,"isPropertyCodeChecked": false, "isPropertyTextChecked": false, "isNavigable": false  }
+              ]
+            },          
+            { "text": "Date from" ,               "showCode": true,"showDescription": false,"isPropertyCodeChecked": false, "isPropertyTextChecked": false, "isNavigable": false  },
+            { "text": "Date to" ,                 "showCode": true,"showDescription": false,"isPropertyCodeChecked": false, "isPropertyTextChecked": false, "isNavigable": false  },
+            { "text": "Completed" ,               "showCode": true,"showDescription": false,"isPropertyCodeChecked": false, "isPropertyTextChecked": false, "isNavigable": false  },
+            { "text": "Created date" ,            "showCode": true,"showDescription": false,"isPropertyCodeChecked": false, "isPropertyTextChecked": false, "isNavigable": false  },
+            { "text": "Timesheet completion date" , "showCode": true,"showDescription": false,"isPropertyCodeChecked": false, "isPropertyTextChecked": false, "isNavigable": false  }         
+          ]
+        }
+    ]}

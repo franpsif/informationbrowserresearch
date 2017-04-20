@@ -1,0 +1,31 @@
+<p-dialog [(visible)]="isVisible" width="870" height="800" [modal]="true">
+  <p-header>
+    Expressions
+    <img src="assets/help_icon.svg" width="14" height="14" (click)="showMainHelp()">
+  </p-header>
+  <div class="card-group">
+    <div class="card expressions-list-header">
+      <div class="card-header">
+        Expression list
+      </div>
+      <div class="card-block expressions-setup-header-card-block">
+        <u4-ib-expression-list #expressionList [expressions]="expressions" (expressionClicked)="selectedExpression($event)"></u4-ib-expression-list>
+      </div>
+      <div>
+        <button id="new-expression" (click)="onNewExpression()" class="btn btn-primary btn-sm">New</button>
+      </div>
+    </div>
+    <div class="card expressions-setup-header">
+      <div class="card-header">
+        Expression Setup
+      </div>
+      <div class="card-block expressions-setup-block">
+        <u4-ib-expression [expression]="activeExpression" (expressionModified)="onExpressionModified($event)"></u4-ib-expression>
+      </div>
+    </div>
+  </div>
+  <p-footer>
+    <button pButton type="button" label="Ok" (click)="onOkClicked()"></button>
+    <button pButton type="button" label="Cancel" class="ui-button-secondary" (click)="onCancelClicked()"></button>
+  </p-footer>
+</p-dialog>

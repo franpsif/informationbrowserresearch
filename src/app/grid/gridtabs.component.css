@@ -1,0 +1,14 @@
+.ib-content {
+  height: calc(100% - 30px);
+  width: 100%;
+}
+
+.ib-content-pivot {
+  height: 100%;
+  width: 100%;
+}
+
+.ib-fullWidth {
+  height: 100%;
+  width: 100%;
+}

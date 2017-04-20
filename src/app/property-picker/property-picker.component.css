@@ -1,0 +1,29 @@
+.main {
+    border: 1px solid #cccccc;
+}
+
+.header {
+    padding: 5px;
+    background-color: #dddddd;
+    font-size: 14px;
+}
+
+.nav {
+    background-color:#9dd8f5;
+}
+
+.actions {
+	float: right;
+    padding-right: 45px;    
+}
+
+.action {
+    display:inline-block;    
+    text-align: center;
+    width: 50px;
+}
+
+.nodes {  
+    overflow-y:scroll;
+    padding: 5px;
+}

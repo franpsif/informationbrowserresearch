@@ -1,0 +1,10 @@
+<ul class="list-group list-group-flush">
+  <li *ngFor="let expression of expressions" class="list-group-item justify-content-between">
+    <span>{{expression.name}}</span>
+    <div class="float-right">
+      <i class="material-icons expression-alert" (click)="selectedExpression(expression)" style="cursor:pointer;" *ngIf="!expression.isValid">error_outline</i>
+      <i class="material-icons search" (click)="selectedExpression(expression)" style="cursor:pointer;" *ngIf="expression.isValid">search</i>
+    </div>
+  </li>
+</ul>
+

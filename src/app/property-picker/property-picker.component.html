@@ -1,0 +1,18 @@
+<div class="main" [style.width.px]="width">
+  <div class="nav" >
+      <u4-ib-property-picker-nav #propertyPickerNav [hidden]="!showNavigation" [rootObject]="rootObject" (navigateObject)="onNavigateObject($event);"></u4-ib-property-picker-nav>
+  </div>
+  <div class="header">
+    {{currentObjectTitle}}
+    <div class="actions">
+      <div class="action">Code</div>
+      <div class="action">Text</div>
+      <div class="space"></div>
+    </div>
+  </div>
+
+  <div class="nodes" [style.height.px]="height">
+    <u4-ib-property-picker-node *ngFor="let item of data" [maxItemsPerGroup]="maxItemsPerGroup" [item]="item" (navigateObject)="onNavigateObject($event);"></u4-ib-property-picker-node>
+  </div>
+
+</div>

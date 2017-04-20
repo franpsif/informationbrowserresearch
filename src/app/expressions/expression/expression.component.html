@@ -1,0 +1,88 @@
+<form>
+  <div class="clearfix">
+    <div class="form-group float-left" style="width: 48%">
+      <label for="nameField">Name</label>
+      <input type="text" class="form-control form-control-sm" id="nameField" name="nameField" placeholder="Name" required [disabled]="expression == null" [(ngModel)]="name" (change)="onChanged()">
+    </div>
+    <div class="form-group float-left description-form-field" style="width: 48%">
+      <label for="descriptionField">Description</label>
+      <input type="text" class="form-control form-control-sm" id="descriptionField" name="descriptionField" placeholder="Description" required [disabled]="expression == null" [(ngModel)]="description" (change)="onChanged()">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="expressionField">Expression</label>
+    <input type="text" class="form-control form-control-sm" id="expressionField" name="expressionField" placeholder="Expression" required [disabled]="expression == null" [(ngModel)]="expressionText" (change)="onChanged()">
+  </div>
+  <div class="row">
+    <span class="column-title list-tiny-margin column-list-title">Columns</span>
+    <span class="column-title list-margin operators-list-title">Operators</span>
+    <span class="column-title list-margin functions-list-title">Functions</span>
+    <span class="column-title list-margin macros-list-title">Macros</span>
+  </div>
+  <div class="row">
+    <div class="list-bordered list-tiny-margin column-list">
+      <div *ngFor="let property of expressionsProvider.columns" class="column-list-item clearfix">
+        <div class="float-left" style="width: 50%">
+          <span>{{property.name}}</span>
+        </div>
+        <div class="float-left">
+          <span>{{property.dataIndex}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="list-bordered list-margin operators-list">
+      <div *ngFor="let operator of expressionsProvider.operators" class="column-list-item clearfix">
+        <div class="float-left">
+          {{operator}}
+        </div>
+      </div>
+    </div>
+    <div class="list-bordered list-margin functions-list">
+      <div *ngFor="let func of expressionsProvider.functions" class="column-list-item clearfix">
+        <div class="float-left">
+          {{func}}
+        </div>
+      </div>
+    </div>
+    <div class="list-bordered list-margin macros-list">
+      <div *ngFor="let macro of expressionsProvider.macros" class="column-list-item clearfix">
+        <div class="float-left">
+          {{macro}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix bottom-form">
+    <div class="float-left" style="width: 40%">
+      <div class="form-group">
+        <label for="dataTypeField">Datatype</label>
+        <select class="form-control form-control-sm" id="dataTypeField" [disabled]="expression == null">
+          <option>Integer</option>
+          <option>String</option>
+          <option>Double</option>
+          <option>Date</option>
+        </select>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" [disabled]="expression == null">
+          Running total
+        </label>
+      </div>
+      <div class="form-group row">
+        <label for="hasSumField" class="col-4 col-form-label">Has Sum</label>
+        <div class="col-8">
+          <select class="form-control form-control-sm" id="hasSumField" [disabled]="expression == null">
+            <option>None</option>
+            <option>Vertical</option>
+            <option>Horizontal</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="float-left explanation-field" style="width: 56%">
+      <label for="explanationField">Explanation</label>
+      <textarea class="form-control form-control-sm" id="explanationField" rows="5" placeholder="Explanation" disabled>Oh man! Do you really think I'm gonna write all this?</textarea>
+    </div>
+  </div>
+</form>

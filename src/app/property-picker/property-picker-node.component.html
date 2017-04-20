@@ -1,0 +1,33 @@
+<li [@flyInOut]="'in'">
+
+  <!-- Item row -->
+  <div class="node" *ngIf="!item.root">
+    <div class="expander" *ngIf="item.children; else blankspace">
+      <a href="#" class ="iconButton" (click)="toggle()">
+        <span class="fa fa-chevron-up" *ngIf="item.expanded"></span>
+        <span class="fa fa-chevron-down" *ngIf="!item.expanded"></span>
+      </a>
+    </div>
+
+    <ng-template  #blankspace>
+      <div class="expander-empty"></div>
+    </ng-template>
+
+    <div  class="property-title" (click)="toggle()">{{item.text}}</div>
+
+    <div class="actions" *ngIf="!item.children">
+      <div class="action"><p-checkbox [(ngModel)]="item.isPropertyCodeChecked" binary="true" [style.visibility]="item.showCode ? 'visible' : 'hidden'" ></p-checkbox></div>
+      <div class="action"><p-checkbox class="action" [(ngModel)]="item.isPropertyTextChecked" binary="true" [style.visibility]="item.showDescription ? 'visible' : 'hidden'" ></p-checkbox></div>
+      <div class="navigation"><a href="#" [style.visibility]="item.isNavigable ? 'visible' : 'hidden'" (click)="onNavigate()"><span class="fa fa-chevron-right"></span></a></div>
+    </div>
+  </div>
+  <!-- item row -->
+
+  <!-- Children -->
+  <ul *ngIf="item.expanded && item.children" [attr.class]="item.root ? 'item-root' : 'item-child'">
+      <u4-ib-property-picker-node  *ngFor="let node of item.children | slice:0:maxItemsToShow" [item]="node" [maxItemsPerGroup]="maxItemsToShow" (navigateObject)="onNavigateObject($event);"></u4-ib-property-picker-node>
+      <div class="more-title" *ngIf="maxItemsExceeded" (click)="toggleMore()">{{toggleTitle}}</div>
+  </ul>
+  <!-- Children -->
+
+</li>
