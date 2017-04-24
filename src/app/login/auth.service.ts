@@ -174,8 +174,8 @@ export class AuthService {
 const userManagerSettings: any = {
       authority: "https://u4ids-sandbox.u4pp.com/identity",      
       client_id: "information-browser",
-      redirect_uri: "http://localhost:4200/token",
-      post_logout_redirect_uri: "http://localhost:4200/",
+      redirect_uri: "http://ib-dist.azurewebsites.net/token",
+      post_logout_redirect_uri: "http://ib-dist.azurewebsites.net",
       response_type: "id_token token",
       scope: "openid",
       
@@ -184,5 +184,21 @@ const userManagerSettings: any = {
       filterProtocolClaims: true,
 
       userStore: new WebStorageStateStore({ store: window.localStorage }),
-      silent_redirect_uri: "http://localhost:4200"
+      silent_redirect_uri: "http://ib-dist.azurewebsites.net"
 };
+
+// const userManagerSettings: any = {
+//       authority: "https://u4ids-sandbox.u4pp.com/identity",      
+//       client_id: "information-browser",
+//       redirect_uri: "http://localhost:4200/token",
+//       post_logout_redirect_uri: "http://localhost:4200/",
+//       response_type: "id_token token",
+//       scope: "openid",
+      
+//       acr_values: "tenant:praetorians",
+//       loadUserInfo: true,
+//       filterProtocolClaims: true,
+
+//       userStore: new WebStorageStateStore({ store: window.localStorage }),
+//       silent_redirect_uri: "http://localhost:4200"
+// };

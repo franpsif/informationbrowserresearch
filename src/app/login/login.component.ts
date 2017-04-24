@@ -60,7 +60,7 @@ export class LoginComponent implements OnInit {
     let customHeaders = new Headers();
     customHeaders.append('Content-Type', 'application/json')
     customHeaders.append('Authorization','Bearer ' + this.access_token);
-    this.http.get('https://u4ids-sandbox.u4pp.com/identity/userinfo', {headers: customHeaders}).subscribe(
+    this.http.get('https://u4ids-sandbox.u4pp.com/identity/connect/userinfo', {headers: customHeaders}).subscribe(
       response => {
       console.log(response);
     });
